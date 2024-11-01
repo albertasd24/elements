@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño de Cubo Tecnológico</title>
+    <style>
+      /*The eye icon on the password can be stylize with any tool you want
+to use (the only way i know to do this correctly is using JS)
+this is meant to be wide supported and it really depends on you browsers
+if i realize any way to stylize the eye it could be added in the future
+in other input type*/
+
+      body {
+        background-color: #000;
+      }
+
+      .container-figures {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 250px;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        /* filter: blur(10px); */
+        -webkit-clip-path: polygon(
+          26% 0,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        clip-path: polygon(
+          26% 0,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        background: rgba(0, 225, 255, 0.808);
+        transition: all 1s ease-in-out;
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        width: 295px;
+        height: 245px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #212121;
+        -webkit-clip-path: polygon(
+          26% 0,
+          31% 5%,
+          61% 5%,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        clip-path: polygon(
+          26% 0,
+          31% 5%,
+          61% 5%,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+      }
+      .figure {
+        width: 200px;
+        height: 250px;
+        background-color: aqua;
+      }
+      .figure1 {
+        clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+      }
+      .figure2 {
+        width: 400px;
+        height: 100px;
+        clip-path: polygon(100% 0, 100% 100%, 27% 100%, 0 0);
+      }
+      .figure3 {
+        width: 400px;
+        height: 100px;
+        clip-path: polygon(8% 0, 92% 0, 100% 32%, 100% 100%, 0 100%, 0 27%);
+        border-top: 2px solid rgb(0, 255, 255);
+        border-left: 2px solid rgb(0, 255, 255);
+        border-right: 2px solid rgb(0, 255, 255);
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 255, 255, 0.575),
+          transparent
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          rgb(0, 76, 255) 40%,
+          transparent
+        );
+      }
+      .figure4 {
+        width: 400px;
+        height: 100px;
+        clip-path: polygon(0 0, 100% 0, 85% 99%, 0 100%);
+        border-radius: 5px 0 0 0;
+      }
+      .figure5 {
+        width: 400px;
+        height: 100px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 17% 100%, 0 48%);
+      }
+      .container-circle {
+        width: 500px;
+        height: 500px;
+        background-color: rgba(208, 255, 251, 0.493);
+        border-radius: 50%;
+        border-bottom: 1px solid;
+        position: relative;
+      }
+      .circle-img {
+        position: absolute;
+        --i: 57%;
+        --o: 60%;
+        mask: radial-gradient(
+          #0000 var(--i),
+          #000 var(--i),
+          #000 var(--o),
+          #0000 var(--o)
+        );
+        background: conic-gradient(#0ff 05%, #0000 05%, #0000 9%, #0ff 09%,
+            #0ff 20%, #0000 20%, #0000 25%, #0ff 25%,
+            #0ff 37%, #0000 37%, #0000 42%, #0ff 42%,
+            #0ff 49%, #0000 49%, #0000 55%, #0ff 55%,
+            #0ff 65%, #0ff 65%, #0ff 72%, #0ff 72%,
+            #0ff 80%, #0000 80%, #0000 86%, #0ff 86%,
+            #0ff 95%, #0000 95%);
+    --i: 59%;
+    --o: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 480px;
+        height: 480px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-figures">
+      <div class="card"></div>
+      <div class="figure figure1"></div>
+      <div class="figure figure2"></div>
+      <div class="figure figure3"></div>
+      <div class="figure figure4"></div>
+      <div class="figure figure5"></div>
+      <div class="container-circle">
+        <div class="circle-img"></div>
+      </div>
+    </div>
+  </body>
+</html>

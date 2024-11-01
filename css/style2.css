@@ -24,7 +24,9 @@ body .cyber-btn+.cyber-btn {
 
 .cyber-btn {
     --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50)*1%));
-    --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+    /* --primary: rgba(39, 124, 236, 0); */
+    /* --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%); */
+    --shadow-primary: rgba(42, 207, 207, 0.637);
     --primary-hue: 0;
     --primary-lightness: 50;
     --color: hsl(0, 0%, 100%);

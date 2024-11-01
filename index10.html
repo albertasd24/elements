@@ -1,0 +1,183 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background-color: #000;
+      }
+
+      .container-figures {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .card {
+          position: relative;
+          width: 300px;
+          height: 250px;
+        }
+        .card:hover .card-content h4{
+            text-shadow: 0 0 5px #3b3b3b;
+            color: rgba(2, 120, 255, 0.884);
+        }
+        .card:hover::before{
+            background: rgba(2, 120, 255, 0.884);
+        }
+        .card:hover::after{
+            /* background: rgba(102, 198, 211, 0.644); */
+        }
+      .card::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        /* filter: blur(10px); */
+        -webkit-clip-path: polygon(
+          26% 0,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        clip-path: polygon(
+          26% 0,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        background: rgb(97, 97, 97);
+        /* background: rgb(0, 174, 255); */
+        transition: all .5s ease-in-out;
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        width: 295px;
+        height: 245px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #313131;
+        /* background-color: #212121; */
+        -webkit-clip-path: polygon(
+          26% 0,
+          31% 5%,
+          61% 5%,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        clip-path: polygon(
+          26% 0,
+          31% 5%,
+          61% 5%,
+          66% 0,
+          92% 0,
+          100% 8%,
+          100% 89%,
+          91% 100%,
+          7% 100%,
+          0 92%,
+          0 0
+        );
+        transition: all .5s ease-in-out;
+
+      }
+      .card-content {
+        position: absolute;
+        z-index: 10;
+        width: 290px;
+        height: 240px;
+        border: 1px solid red;
+        padding: 1rem .5rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .card-content h4 {
+          font-size: 1.4rem;
+          color: #fff;
+        transition: all .5s ease-in-out;
+
+        }
+        .card-content .name-bussines{
+            font-weight: 500;
+            color: #ffffff;
+        }
+        .card-content .date{
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .card-content .description{
+            height: 125px;
+            text-align: justify;
+            overflow: auto;
+            padding-right: 2px;
+        }
+        /* Estilos para navegadores basados en WebKit (Chrome, Safari) */
+        .card-content ::-webkit-scrollbar {
+            width: 5px; /* Ancho de la barra de desplazamiento vertical */
+            height: 12px; /* Altura de la barra de desplazamiento horizontal */
+            transition: background-color 1s ease-in;
+        }
+
+        .card-content ::-webkit-scrollbar-track {
+            background: #f1f1f100; /* Color de fondo de la pista */
+            border-radius: 10px; /* Bordes redondeados en la pista */
+            transition: background-color 1s ease-in;
+        }
+
+        .card-content ::-webkit-scrollbar-thumb {
+            background-color: #555; /* Color de la barra de desplazamiento */
+            width: 10px;
+            border-radius: 10px; /* Bordes redondeados en la barra */
+            border: none; /* Espacio alrededor de la barra */
+            transition: background-color 1s ease-in;
+        }
+
+        .card-content ::-webkit-scrollbar-thumb:hover {
+            background-color: #129dee; /* Color de la barra al pasar el ratón */
+            transition: background-color 1s ease-in;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-figures">
+      <div class="card">
+        <div class="card-content">
+          <h4>Backend Development</h4>
+          <p class="name-bussines">Grupo ASD</p>
+          <p class="date">Junio 2022 - Noviembre 2023</p>
+          <p class="description">Durante el último año y cuatro meses, he desempeñado un papel clave como programador backend en Grupo ASD, especializándome en el desarrollo de arquitecturas backend robustas, modelamiento de software con UML y gestión de despliegues eficientes mediante Docker. Mi enfoque ha sido asegurar el funcionamiento óptimo y confiable de los sistemas, mientras que mi participación en labores de investigación me ha permitido explorar e implementar nuevas tecnologías y estrategias para optimizar procesos. Con esto, he contribuido activamente al crecimiento y a la innovación continua dentro de la organización</p>
+        </div>
+      </div>
+    </div>
+  </body>
